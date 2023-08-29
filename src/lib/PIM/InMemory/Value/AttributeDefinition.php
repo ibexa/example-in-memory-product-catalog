@@ -16,12 +16,18 @@ use Ibexa\Contracts\ProductCatalog\Values\AttributeTypeInterface;
 final class AttributeDefinition implements AttributeDefinitionInterface
 {
     public function __construct(
+        private readonly int $id,
         private readonly string $identifier,
         private readonly string $name,
         private readonly ?string $description,
         private readonly AttributeTypeInterface $type,
         private readonly AttributeGroupInterface $group
     ) {
+    }
+
+    public function getId(): int
+    {
+        return $this->id;
     }
 
     public function getName(): string

@@ -121,6 +121,7 @@ final class DataProvider
         if ($this->attributeDefinitions === null) {
             $this->attributeDefinitions = new ArrayMap([
                 'height' => new AttributeDefinition(
+                    1,
                     'height',
                     'Height',
                     null,
@@ -128,6 +129,7 @@ final class DataProvider
                     AttributeGroup::DEFAULT
                 ),
                 'width' => new AttributeDefinition(
+                    2,
                     'width',
                     'Width',
                     null,
