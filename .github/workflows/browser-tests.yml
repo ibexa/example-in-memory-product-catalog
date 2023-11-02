@@ -25,6 +25,7 @@ jobs:
     uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
     with:
       project-edition: 'commerce'
+      send-success-notification: ${{ github.event.inputs.send-success-notification != 'false' }}
       test-setup-phase-1: '--profile=setup --suite=remote-pim --mode=standard --config=vendor/ibexa/example-in-memory-product-catalog/behat_suites.yml'
       test-suite:  '--profile=browser --suite=remote-pim --config=vendor/ibexa/example-in-memory-product-catalog/behat_suites.yml'
     secrets:
