@@ -23,7 +23,7 @@ Feature: Remote PIM
         And I should not see products on catalog form
             | Name            | Code  |
             | Demo Product 4  | 0004  |
-        And I click on the edit action bar button "Create"
+        And I click on the edit action bar button "Save and close"
         And success notification that "Catalog 'Catalog with filter' created." appears
         And I should see a Catalog with values
             | Name                 | Identifier         |

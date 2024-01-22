@@ -19,7 +19,7 @@ Feature: Remote PIM
         Given I open "Demo Product 1" Product page in admin SiteAccess
         When I change tab to "Prices"
         And I set a Base price to "10.00" in "EUR"
-        And I click on the edit action bar button "Create"
+        And I click on the edit action bar button "Save and close"
         Then I should see a Base price with "10.00 €" value
 
    Scenario: Availability can be added to Product
@@ -28,6 +28,6 @@ Feature: Remote PIM
         And I start adding availability to product
         And I set an Availability to "true"
         And I set a Stock to "5"
-        And I click on the edit action bar button "Create"
+        And I click on the edit action bar button "Save and close"
         Then I should see an Availability with "true" value
         And I should see a Stock with "5" value
