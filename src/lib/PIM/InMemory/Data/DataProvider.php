@@ -124,7 +124,7 @@ final class DataProvider
                     1,
                     'height',
                     'Height',
-                    null,
+                    'Description',
                     new AttributeType('integer'),
                     AttributeGroup::DEFAULT
                 ),
@@ -132,7 +132,7 @@ final class DataProvider
                     2,
                     'width',
                     'Width',
-                    null,
+                    'Description',
                     new AttributeType('integer'),
                     AttributeGroup::DEFAULT
                 ),
