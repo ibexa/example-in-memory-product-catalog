@@ -12,5 +12,5 @@ Feature: Remote PIM
     Scenario: Attribute can be viewed
         Given I open "Height" Attribute page in admin SiteAccess
         And I should see an Attribute with values
-            | Name    | Identifier | Type    | Group   | Position |
-            | Height  | height     | integer | DEFAULT | 0        |
+            | Name    | Identifier | Description | Type    | Group   | Position |
+            | Height  | height     | Description | integer | DEFAULT | 0        |
