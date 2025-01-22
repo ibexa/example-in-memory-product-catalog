@@ -37,7 +37,7 @@ ibexa:
 
 ## COPYRIGHT
 
-Copyright (C) 1999-2024 Ibexa AS (formerly eZ Systems AS). All rights reserved.
+Copyright (C) 1999-2025 Ibexa AS (formerly eZ Systems AS). All rights reserved.
 
 ## LICENSE
 
