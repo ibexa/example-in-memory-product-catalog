@@ -57,7 +57,7 @@ final class Product extends ValueObject implements ProductInterface, PriceAwareI
         return $this->type;
     }
 
-    public function getThumbnail(): ?Thumbnail
+    public function getThumbnail(): Thumbnail
     {
         return $this->thumbnail ?? $this->getPlaceholderThumbnail();
     }
