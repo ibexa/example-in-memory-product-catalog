@@ -82,16 +82,6 @@ final class CriterionVisitor
 
     private function evaluatePriceRange(Criterion\BasePriceRange $criterion, ProductInterface $product): bool
     {
-        $currency = $this->currencyService->getCurrencyByCode(
-            $criterion->getMin()->getCurrency()->getCode()
-        );
-
-        /** @var \Ibexa\ExampleInMemoryProductCatalog\PIM\InMemory\Value\Product $product */
-        $price = $product->getPrice(new PriceContext($currency));
-        if ($price === null) {
-            return false;
-        }
-
         $min = $criterion->getMin();
         $max = $criterion->getMax();
 
@@ -99,10 +89,24 @@ final class CriterionVisitor
             return false;
         }
 
+        if ($min === null) {
+            $currencyCode = $max->getCurrency()->getCode();
+        } else {
+            $currencyCode = $min->getCurrency()->getCode();
+        }
+
+        $currency = $this->currencyService->getCurrencyByCode($currencyCode);
+
+        /** @var \Ibexa\ExampleInMemoryProductCatalog\PIM\InMemory\Value\Product $product */
+        $price = $product->getPrice(new PriceContext($currency));
+        if ($price === null) {
+            return false;
+        }
+
         $productPriceMoney = $price->getMoney();
 
-        return $criterion->getMin()?->lessThanOrEqual($productPriceMoney)
-            && $criterion->getMax()?->greaterThanOrEqual($productPriceMoney);
+        return $min?->lessThanOrEqual($productPriceMoney)
+            && $max?->greaterThanOrEqual($productPriceMoney);
     }
 
     private function evaluateIntegerAttribute(

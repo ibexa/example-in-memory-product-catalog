@@ -20,7 +20,7 @@ final class AttributeOptions implements OptionsBag
         return [];
     }
 
-    public function get(string $key, $default = null)
+    public function get(string $key, mixed $default = null): mixed
     {
         return $default;
     }

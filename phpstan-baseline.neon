@@ -1,21 +1,19 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Call to an undefined method Ibexa\\\\Contracts\\\\ProductCatalog\\\\Values\\\\ProductInterface\\:\\:isAvailable\\(\\)\\.$#"
+			message: '#^Call to an undefined method Ibexa\\Contracts\\ProductCatalog\\Values\\ProductInterface\:\:isAvailable\(\)\.$#'
+			identifier: method.notFound
 			count: 1
 			path: src/lib/PIM/InMemory/CriterionVisitor.php
 
 		-
-			message: "#^Cannot call method getCurrency\\(\\) on Money\\\\Money\\|null\\.$#"
-			count: 1
-			path: src/lib/PIM/InMemory/CriterionVisitor.php
-
-		-
-			message: "#^Parameter \\#1 \\$object of class Ibexa\\\\ExampleInMemoryProductCatalog\\\\PIM\\\\InMemory\\\\Permissions\\\\Context constructor expects Ibexa\\\\Contracts\\\\Core\\\\Repository\\\\Values\\\\ValueObject, object\\|null given\\.$#"
+			message: '#^Parameter \#1 \$object of class Ibexa\\ExampleInMemoryProductCatalog\\PIM\\InMemory\\Permissions\\Context constructor expects Ibexa\\Contracts\\Core\\Repository\\Values\\ValueObject, object\|null given\.$#'
+			identifier: argument.type
 			count: 1
 			path: src/lib/PIM/InMemory/Permissions/ContextProvider.php
 
 		-
-			message: "#^Class Ibexa\\\\ExampleInMemoryProductCatalog\\\\PIM\\\\InMemory\\\\Value\\\\AssetCollection extends generic class Ibexa\\\\Contracts\\\\Core\\\\Collection\\\\ArrayList but does not specify its types\\: TValue$#"
+			message: '#^Class Ibexa\\ExampleInMemoryProductCatalog\\PIM\\InMemory\\Value\\AssetCollection extends generic class Ibexa\\Contracts\\Core\\Collection\\ArrayList but does not specify its types\: TValue$#'
+			identifier: missingType.generics
 			count: 1
 			path: src/lib/PIM/InMemory/Value/AssetCollection.php
