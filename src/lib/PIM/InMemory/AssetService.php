@@ -17,7 +17,7 @@ use Ibexa\ExampleInMemoryProductCatalog\PIM\InMemory\Value\AssetCollection;
 
 final class AssetService implements AssetServiceInterface
 {
-    public function findAssets(ProductInterface $product): AssetCollectionInterface
+    public function findAssets(ProductInterface $product, bool $onlyAvailable = false): AssetCollectionInterface
     {
         return new AssetCollection();
     }

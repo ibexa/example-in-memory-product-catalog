@@ -115,4 +115,9 @@ final class ProductService implements ProductServiceInterface
 
         return $products;
     }
+
+    public function findVariants(ProductVariantQuery $query, ?LanguageSettings $languageSettings = null): ProductVariantListInterface
+    {
+        return new ProductVariantList();
+    }
 }
