@@ -15,8 +15,8 @@
     "prefer-stable": true,
     "require": {
         "php": ">=8.3",
-        "ibexa/core": "~5.0.x-dev",
-        "ibexa/product-catalog": "~5.0.x-dev",
+        "ibexa/core": "~6.0.x-dev",
+        "ibexa/product-catalog": "~6.0.x-dev",
         "symfony/config": "^7.4",
         "symfony/dependency-injection": "^7.4",
         "symfony/event-dispatcher": "^7.4",
@@ -64,7 +64,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "5.0.x-dev"
+            "dev-main": "6.0.x-dev"
         }
     },
     "config": {
